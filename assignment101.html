@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment 10.1 - Javascript Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: goldenrod">
+    <h1 style="color:antiquewhite; text-align: center">This code calculates the area of the Rectangle</h1>
+    <Script>
+        /*Calculates the area of the rectangle, this is from Typescript class of Rectangle*/
+        var Rectangle = /** @class */ (function () {
+            function Rectangle(length, breadth) {
+                this.length = length;
+                this.breadth = breadth;
+            }
+            Rectangle.prototype.calculateArea = function (length, breadth) {
+                console.log(length * breadth);
+            };
+            return Rectangle;
+        }());
+        /*Creates a new Object and passes the length: 4 and breadth:5 - Check console for 20*/
+        
+        var d = new Rectangle();
+        d.calculateArea(4, 5);
+
+        // Typescript Code used to generate the Javascript code above 
+
+        /*
+        class Rectangle {
+            private length:number;
+            private breadth:number; 
+            constructor(length:number, breadth:number){
+                this.length =  length;
+                this.breadth =  breadth; 
+            }
+            public calculateArea(length:number, breadth:number){
+                console.log(length * breadth); 
+            }
+        }
+
+        let d = new Rectangle();
+        d.calculateArea(4, 5);
+
+        */
+    </Script>
+    
+</body>
+</html>
